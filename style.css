@@ -709,6 +709,19 @@ section {
 .medal-icon {
   font-size: 3rem;
   margin-bottom: 16px;
+  display: inline-block;
+}
+
+.silver-icon {
+  color: #94a3b8;
+}
+
+.gold-icon {
+  color: var(--color-accent-gold);
+}
+
+.bronze-icon {
+  color: #b45309;
 }
 
 .prize-card h3 {
