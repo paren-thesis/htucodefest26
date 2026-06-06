@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COMPSSA Hackathon 2026 | Ho Technical University</title>
-  <meta name="description" content="Join the COMPSSA Week Celebration Hackathon 2026 at Ho Technical University. Build, Innovate, and Code to win GHS 3,500 in prizes.">
-  
+  <meta name="description"
+    content="Join the COMPSSA Week Celebration Hackathon 2026 at Ho Technical University. Build, Innovate, and Code to win GHS 3,500 in prizes.">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Topographic Background Decoration -->
   <div class="topo-bg">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-      <path fill="rgba(21, 46, 138, 0.03)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,138.7C672,149,768,203,864,208C960,213,1056,171,1152,149.3C1248,128,1344,128,1392,128L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+      <path fill="rgba(21, 46, 138, 0.03)" fill-opacity="1"
+        d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,138.7C672,149,768,203,864,208C960,213,1056,171,1152,149.3C1248,128,1344,128,1392,128L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+      </path>
     </svg>
   </div>
+
+  <!-- Ambient Glowing Background Orbs -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
 
   <!-- Header / Navigation -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo" id="nav-logo">
-        <span class="logo-accent">COMPSSA</span> HACK
+        <img src="compssa-logo.png" alt="COMPSSA HACK" class="nav-logo-img">
       </a>
-      
+
       <nav class="nav-menu" id="nav-menu">
         <a href="#hero" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
@@ -39,13 +50,17 @@
         <a href="#prizes" class="nav-link">Prizes</a>
         <a href="#schedule" class="nav-link">Schedule</a>
         <a href="#faq" class="nav-link">FAQ</a>
-        <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" class="nav-btn-mobile" id="nav-register-mobile">Register Now</a>
+        <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" class="nav-btn-mobile"
+          id="nav-register-mobile">Register Now</a>
       </nav>
 
       <div class="nav-actions">
         <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" class="nav-btn" id="nav-register">
           <span>Register Now</span>
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
         </a>
         <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
           <span class="bar"></span>
@@ -65,19 +80,23 @@
             <span class="badge-dot"></span>
             COMPSSA Week Celebration
           </div>
-          
+
           <h1 class="hero-title" id="hero-title">
             HACKA<span class="text-gradient">THON</span> <span class="year-badge">2026</span>
           </h1>
-          
+
           <p class="hero-tagline" id="hero-tagline">BUILD. INNOVATE. CODE.</p>
-          
+
           <p class="hero-desc">
-            Unleash your creativity, collaborate with peer developers, and engineer next-generation solutions. Hosted by the Department of Computer Science at Ho Technical University.
+            Unleash your creativity, collaborate with peer developers, and engineer next-generation solutions. Hosted by
+            the Department of Computer Science at Ho Technical University.
           </p>
 
           <div class="prize-highlight" id="prize-highlight">
-            <svg class="prize-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34M12 2a4 4 0 0 0-4 4v5c0 1.5 1.5 3 4 3s4-1.5 4-3V6a4 4 0 0 0-4-4z"/></svg>
+            <svg class="prize-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34M12 2a4 4 0 0 0-4 4v5c0 1.5 1.5 3 4 3s4-1.5 4-3V6a4 4 0 0 0-4-4z" />
+            </svg>
             <div class="prize-text">
               <span class="prize-label">Total Prize Pool</span>
               <span class="prize-value">GHS 3,500+ <span class="prize-sub">to be given away</span></span>
@@ -85,9 +104,12 @@
           </div>
 
           <div class="hero-ctas">
-            <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="hero-register-btn">
+            <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+              id="hero-register-btn">
               <span>Register for Hackathon</span>
-              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </a>
             <a href="#about" class="btn btn-secondary" id="hero-details-btn">Learn More</a>
           </div>
@@ -120,11 +142,19 @@
             </div>
             <div class="event-details">
               <div class="detail-item">
-                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                <span>June 24 - 26, 2026</span>
+                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                <span>June 24 – July 1, 2026</span>
               </div>
               <div class="detail-item">
-                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
                 <span>Ho Technical University Campus</span>
               </div>
             </div>
@@ -141,30 +171,47 @@
           <h2 class="section-title">Innovating For The Future</h2>
           <div class="title-underline"></div>
         </div>
-        
+
         <div class="about-grid">
           <div class="about-card">
             <div class="about-icon-wrapper">
-              <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
             </div>
             <h3>What is COMPSSA Hack?</h3>
-            <p>A flagship collaborative coding event uniting the brightest computer science students at Ho Technical University. Over 48 hours, teams design, prototype, and pitch inventive solutions solving local and global challenges.</p>
+            <p>A flagship collaborative coding event uniting the brightest computer science students at Ho Technical
+              University. Over a full week of building, teams design, prototype, and pitch inventive solutions from two
+              real-world project briefs.</p>
           </div>
 
           <div class="about-card">
             <div class="about-icon-wrapper">
-              <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
             </div>
             <h3>Who Can Participate?</h3>
-            <p>Open to all students from Ho Technical University who are passionate about design, programming, hardware integration, or entrepreneurship. Beginners and expert hackers alike are welcome!</p>
+            <p>Open to all students from Ho Technical University who are passionate about design, programming, or
+              entrepreneurship. Teams of <strong>4 – 5 members</strong> — beginners and experienced hackers alike are
+              welcome!</p>
           </div>
 
           <div class="about-card">
             <div class="about-icon-wrapper">
-              <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
             </div>
             <h3>Why Join Us?</h3>
-            <p>Test your skills in a high-octane environment, receive dedicated mentorship from industry professionals, earn official certificates, network with developers, and grab your share of GHS 3,500+ in awards.</p>
+            <p>Test your skills in a high-octane environment, receive dedicated mentorship from industry professionals,
+              earn official certificates, network with developers, and grab your share of GHS 3,500+ in awards.</p>
           </div>
         </div>
       </div>
@@ -178,38 +225,30 @@
           <h2 class="section-title">Choose Your Track</h2>
           <div class="title-underline"></div>
         </div>
-
         <div class="tracks-grid">
           <div class="track-card">
-            <div class="track-tag">Track 1</div>
-            <h3>Web & Mobile Solutions</h3>
-            <p>Design modern, highly accessible web portals or mobile utility applications addressing healthcare, education, agriculture, or financial technology.</p>
+            <div class="track-tag">Project 1</div>
+            <h3>Live E-Voting System</h3>
+            <p>Build a secure, real-time electronic voting platform suitable for student union elections or
+              institutional polling — ensuring integrity, transparency, and accessibility.</p>
             <ul class="track-details">
-              <li>Responsive Web Platforms</li>
-              <li>Native/Cross-platform Mobile Apps</li>
-              <li>User-Centric UI/UX Interfaces</li>
+              <li>Secure Voter Authentication</li>
+              <li>Real-Time Results Dashboard</li>
+              <li>Tamper-Proof Audit Trail</li>
+              <li>Mobile-Responsive Ballot Interface</li>
             </ul>
           </div>
 
           <div class="track-card">
-            <div class="track-tag">Track 2</div>
-            <h3>AI, Data & Automation</h3>
-            <p>Harness the power of machine learning, descriptive data analytics, or smart natural language processing tools to automate everyday human tasks.</p>
+            <div class="track-tag">Project 2</div>
+            <h3>Dues Payment System</h3>
+            <p>Design a streamlined dues collection and tracking platform for student associations — enabling members to
+              pay, admins to manage records, and leadership to generate reports.</p>
             <ul class="track-details">
-              <li>Predictive Intelligence APIs</li>
-              <li>Custom Chatbots & Virtual Assistants</li>
-              <li>Data-driven Visual Dashboards</li>
-            </ul>
-          </div>
-
-          <div class="track-card">
-            <div class="track-tag">Track 3</div>
-            <h3>IoT & Cyber Security</h3>
-            <p>Integrate physical hardware modules or develop defensive systems to encrypt, audit, secure, or decentralize digital processes.</p>
-            <ul class="track-details">
-              <li>Smart Hardware Automation</li>
-              <li>Security Auditing Dashboards</li>
-              <li>Privacy Protection Systems</li>
+              <li>Member Payment Portal</li>
+              <li>Admin Dashboard &amp; Records Management</li>
+              <li>Automated Payment Reminders</li>
+              <li>Financial Report Generation</li>
             </ul>
           </div>
         </div>
@@ -223,7 +262,8 @@
           <span class="section-subtitle">Rewards</span>
           <h2 class="section-title">Prizes & Awards</h2>
           <div class="title-underline"></div>
-          <p class="section-intro-text">We are offering more than GHS 3,500 in awards, alongside exclusive developer merchandise, technical resources, and professional mentorship.</p>
+          <p class="section-intro-text">We are offering more than GHS 3,500 in awards, alongside exclusive developer
+            merchandise, technical resources, and professional mentorship.</p>
         </div>
 
         <div class="prizes-container">
@@ -233,9 +273,8 @@
             <h3>2nd Place Winner</h3>
             <p class="prize-amt">GHS 1,000</p>
             <ul class="prize-perks">
-              <li>Silver Certificates</li>
-              <li>Special Dev Merch</li>
-              <li>Mentorship Session</li>
+              <li>Official Winner Certificates</li>
+              <li>Free Seat at Dinner Night</li>
             </ul>
           </div>
 
@@ -246,9 +285,8 @@
             <h3>1st Place Winner</h3>
             <p class="prize-amt">GHS 2,000</p>
             <ul class="prize-perks">
-              <li>Gold Winner Trophy</li>
-              <li>Exclusive Premium Merch</li>
-              <li>3-Month Industry Mentorship</li>
+              <li>Official Winner Certificates</li>
+              <li>Free Seat at Dinner Night</li>
             </ul>
           </div>
 
@@ -258,9 +296,8 @@
             <h3>3rd Place Winner</h3>
             <p class="prize-amt">GHS 500</p>
             <ul class="prize-perks">
-              <li>Bronze Certificates</li>
-              <li>Custom Branded Notebooks</li>
-              <li>Mentorship Session</li>
+              <li>Official Winner Certificates</li>
+              <li>Free Seat at Dinner Night</li>
             </ul>
           </div>
         </div>
@@ -275,14 +312,14 @@
           <h2 class="section-title">Event Schedule</h2>
           <div class="title-underline"></div>
         </div>
-
         <div class="timeline">
           <div class="timeline-item left">
             <div class="timeline-dot"></div>
             <div class="timeline-date">June 24, 09:00 AM</div>
             <div class="timeline-content">
               <h3>Opening Ceremony</h3>
-              <p>Keynotes from Ho Technical University faculty, rules briefing, sponsor highlights, and team match-making session.</p>
+              <p>Keynotes from HTU faculty, project brief reveal, rules briefing, sponsor highlights, and team formation
+                session.</p>
             </div>
           </div>
 
@@ -290,35 +327,49 @@
             <div class="timeline-dot"></div>
             <div class="timeline-date">June 24, 11:00 AM</div>
             <div class="timeline-content">
-              <h3>Hacking Begins!</h3>
-              <p>The coding clock starts. Mentors arrive on-site and join online channels to assist with design and system architecture.</p>
+              <h3>Building Week Begins!</h3>
+              <p>The coding clock starts. Teams select their project brief and begin designing, building, and iterating.
+                Mentors are available daily on-site and online.</p>
             </div>
           </div>
 
           <div class="timeline-item left">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">June 25, 02:00 PM</div>
+            <div class="timeline-date">June 27, 02:00 PM</div>
             <div class="timeline-content">
-              <h3>Mid-Way Progress Check</h3>
-              <p>Quick progress presentation with mentors to ensure technical implementations are on track. Troubleshooting and system support.</p>
+              <h3>Mid-Week Check-In</h3>
+              <p>Quick progress reviews with assigned mentors. Teams share updates, receive technical guidance, and
+                troubleshoot blockers.</p>
             </div>
           </div>
 
           <div class="timeline-item right">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">June 26, 11:00 AM</div>
+            <div class="timeline-date">June 29, 06:00 PM</div>
             <div class="timeline-content">
-              <h3>Hacking Ends & Pitch Prep</h3>
-              <p>Coding stops! Final repositories are submitted, and teams prepare their interactive 5-minute project pitch deck.</p>
+              <h3>Dinner Night 🍽️</h3>
+              <p>A special evening for all participants and prize winners to unwind, network, and celebrate the week's
+                progress together.</p>
             </div>
           </div>
 
           <div class="timeline-item left">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">June 26, 02:00 PM</div>
+            <div class="timeline-date">June 30, 11:00 AM</div>
             <div class="timeline-content">
-              <h3>Demo Day & Awards</h3>
-              <p>Teams showcase live builds to a panel of expert judges. Scoring, feedback, and grand winner prize distributions.</p>
+              <h3>Building Ends &amp; Submission</h3>
+              <p>Code freeze! Final repositories are submitted. Finalists are announced and teams prepare their 5-minute
+                pitch presentations.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">July 1, 10:00 AM</div>
+            <div class="timeline-content">
+              <h3>Finalist Pitch Day &amp; Awards</h3>
+              <p>Selected finalists present live demos to a panel of expert judges. Scores are tallied, feedback is
+                shared, and winners are crowned.</p>
             </div>
           </div>
         </div>
@@ -338,40 +389,52 @@
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" id="faq-q1">
               <span>Is there a fee to participate in the hackathon?</span>
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
             </button>
             <div class="faq-answer">
-              <p>No, participation is completely free! We welcome all HTU students to join, create, and submit solutions without any entry cost.</p>
+              <p>No, participation is completely free! We welcome all HTU students to join, create, and submit solutions
+                without any entry cost.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" id="faq-q2">
               <span>Do I need to have a team already formed?</span>
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
             </button>
             <div class="faq-answer">
-              <p>Not necessarily! You can register individually and join a team formation session on Day 1. Recommended team sizes are between 2 to 4 people.</p>
+              <p>Not necessarily! You can register individually and join the team formation session on Day 1. Teams must
+                have between <strong>4 to 5 members</strong> to be eligible to compete.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" id="faq-q3">
               <span>What is the registration deadline?</span>
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
             </button>
             <div class="faq-answer">
-              <p>Registration closes on June 23, 2026, at 11:59 PM. Make sure to submit your form early to reserve custom participant merchandise.</p>
+              <p>Registration closes on June 23, 2026, at 11:59 PM. Make sure to submit your form early to reserve
+                custom participant merchandise.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" id="faq-q4">
               <span>What if I have limited coding experience?</span>
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
             </button>
             <div class="faq-answer">
-              <p>We highly encourage beginners! You can contribute through UI/UX design, brainstorming, technical writing, or pitching. Plus, our tech mentors are always available to help guide your code.</p>
+              <p>We highly encourage beginners! You can contribute through UI/UX design, brainstorming, technical
+                writing, or pitching. Plus, our tech mentors are always available to help guide your code.</p>
             </div>
           </div>
         </div>
@@ -385,21 +448,26 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="#" class="footer-logo"><span class="logo-accent">COMPSSA</span> HACK</a>
-          <p>Organized by the Department of Computer Science at Ho Technical University. Promoting innovation, coding excellence, and collaboration.</p>
+          <p>Organized by the Department of Computer Science at Ho Technical University. Promoting innovation, coding
+            excellence, and collaboration.</p>
         </div>
         <div class="footer-partners">
           <h4>Partners & Sponsors</h4>
           <div class="partners-list">
             <div class="partner-item">
-              <span class="partner-logo-txt"><span class="partner-a">a</span>xlr8 <span class="partner-sub">HTU</span></span>
+              <span class="partner-logo-txt"><span class="partner-a">a</span>xlr8 <span
+                  class="partner-sub">HTU</span></span>
             </div>
             <div class="partner-item">
-              <span class="partner-logo-txt">Ho Technical University</span>
+              <img src="HTU-LOGO.png" alt="Ho Technical University" class="partner-logo">
+            </div>
+            <div class="partner-item">
+              <img src="compssa-logo.png" alt="COMPSSA" class="partner-logo">
             </div>
           </div>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <p>&copy; 2026 COMPSSA Ho Technical University. All rights reserved.</p>
         <p>Built for the COMPSSA Week Celebration.</p>
@@ -409,4 +477,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>
