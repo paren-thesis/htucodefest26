@@ -69,6 +69,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -78,6 +80,19 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Background Topography */
@@ -288,12 +303,16 @@ body {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 48px;
   align-items: center;
+  width: 100%;
+  min-width: 0;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
+  width: 100%;
 }
 
 .badge {
@@ -407,6 +426,7 @@ body {
 .prize-text {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .prize-label {
@@ -480,6 +500,8 @@ body {
 .hero-widget {
   display: flex;
   justify-content: center;
+  min-width: 0;
+  width: 100%;
 }
 
 .countdown-card {
@@ -625,6 +647,13 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  min-width: 0;
+}
+
+.about-grid > *,
+.tracks-grid > *,
+.prizes-container > * {
+  min-width: 0;
 }
 
 .about-card {
@@ -1318,6 +1347,123 @@ section {
     --nav-height: 70px;
   }
 
+  .container,
+  .hero-container,
+  .nav-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 32px);
+    padding-bottom: 48px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 9vw, 2.75rem);
+    letter-spacing: -0.5px;
+    word-break: break-word;
+  }
+
+  .year-badge {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 0.5em;
+    padding: 2px 8px;
+  }
+
+  .hero-tagline {
+    font-size: clamp(0.95rem, 3.5vw, 1.4rem);
+    letter-spacing: 1px;
+    word-break: break-word;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    text-align: center;
+  }
+
+  .prize-highlight {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .prize-value {
+    font-size: 1.35rem;
+  }
+
+  .hero-ctas {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-ctas .btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .countdown-card {
+    padding: 24px 16px;
+  }
+
+  .timer {
+    gap: 4px;
+  }
+
+  .timer-number {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .timer-divider {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+    margin-bottom: 16px;
+  }
+
+  .timer-label {
+    font-size: 0.65rem;
+  }
+
+  .detail-item {
+    font-size: 0.875rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 6vw, 2rem);
+  }
+
+  .glow-orb {
+    width: 220px;
+    height: 220px;
+  }
+
+  .track-card,
+  .about-card {
+    padding: 24px;
+  }
+
+  .prize-amt {
+    font-size: 2rem;
+  }
+
+  .prize-card.gold .prize-amt {
+    font-size: 2.4rem;
+  }
+
+  .timeline {
+    overflow-x: hidden;
+    margin-top: 32px;
+  }
+
   /* Navigation Mobile Toggle */
   .mobile-toggle {
     display: block;
@@ -1404,8 +1550,7 @@ section {
 
   .timeline-item {
     width: 100%;
-    padding-left: 56px;
-    padding-right: 8px;
+    padding: 10px 8px 10px 56px;
   }
 
   .timeline-item.right {
@@ -1427,5 +1572,57 @@ section {
     flex-direction: column;
     gap: 16px;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .hero-container,
+  .nav-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .nav-logo-img {
+    height: 32px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.65rem, 8.5vw, 2.25rem);
+  }
+
+  .hero-tagline {
+    letter-spacing: 0.5px;
+  }
+
+  .countdown-card {
+    padding: 20px 12px;
+  }
+
+  .timer-number {
+    font-size: 1.35rem;
+  }
+
+  .timer-divider {
+    font-size: 1.1rem;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .faq-question span {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .partners-list {
+    gap: 12px;
+  }
+
+  .partner-item {
+    padding: 10px 16px;
   }
 }
