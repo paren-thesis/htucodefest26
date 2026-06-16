@@ -57,6 +57,30 @@ document.addEventListener('DOMContentLoaded', () => {
       if (countdownTitle) {
         countdownTitle.textContent = "Launch Day is Here!";
       }
+
+      // Disable registration buttons
+      const regButtons = [
+        document.getElementById('hero-register-btn'),
+        document.getElementById('nav-register'),
+        document.getElementById('nav-register-mobile')
+      ];
+      
+      regButtons.forEach(btn => {
+        if (btn) {
+          const span = btn.querySelector('span');
+          if (span) {
+            span.textContent = 'Registration Closed';
+          } else {
+            btn.textContent = 'Registration Closed';
+          }
+          btn.removeAttribute('href');
+          btn.classList.add('btn-disabled');
+          const svg = btn.querySelector('svg');
+          if (svg) {
+            svg.style.display = 'none';
+          }
+        }
+      });
     }
   }
 
