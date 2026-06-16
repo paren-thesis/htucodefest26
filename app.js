@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- 2. Countdown Timer ---
-  // Event Date: June 17, 2026, at 09:00:00 AM
-  const eventDate = new Date('June 17, 2026 09:00:00').getTime();
+  // Event Date: June 18, 2026, at 10:00:00 AM
+  const eventDate = new Date('June 18, 2026 10:00:00').getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const countdownTitle = document.querySelector('.countdown-card h3');
       if (countdownTitle) {
-        countdownTitle.textContent = "Event Has Started!";
+        countdownTitle.textContent = "Launch Day is Here!";
       }
     }
   }

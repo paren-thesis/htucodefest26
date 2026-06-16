@@ -494,6 +494,28 @@ main {
   transform: translateY(-3px);
 }
 
+.btn-whatsapp {
+  background: linear-gradient(135deg, #128C7E, #25D366);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.2);
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #075E54, #128C7E);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+}
+
+.btn-icon-fa {
+  font-size: 1.25rem;
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
 /* -------------------------------------------------------------
  * Widget / Countdown Card
  * ------------------------------------------------------------- */
