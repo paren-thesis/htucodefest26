@@ -1,0 +1,537 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css');
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-tertiary: #64748b;
+  --color-border-tertiary: #e2e8f0;
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8fafc;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --color-background-info: #e0f2fe;
+  --color-text-info: #0369a1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #cbd5e1;
+    --color-text-tertiary: #94a3b8;
+    --color-border-tertiary: #334155;
+    --color-background-primary: #0f172a;
+    --color-background-secondary: #1e293b;
+    --color-background-info: #0c4a6e;
+    --color-text-info: #38bdf8;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+  font-family: var(--font-sans); 
+  color: var(--color-text-primary); 
+  background-color: var(--color-background-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.report-container {
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.report-header {
+  margin-bottom: 2.5rem;
+  position: relative;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border-tertiary);
+}
+
+.report-subtitle {
+  font-family: var(--font-heading);
+  font-size: 11px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--color-text-secondary); 
+  margin-bottom: 6px;
+}
+
+.report-title {
+  font-family: var(--font-heading);
+  font-size: 28px; 
+  font-weight: 800; 
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.report-date {
+  font-size: 13px; 
+  color: var(--color-text-tertiary); 
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.section { margin-bottom: 2.5rem; }
+
+.section-title { 
+  font-family: var(--font-heading);
+  font-size: 14px; 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  letter-spacing: 0.08em; 
+  color: var(--color-text-secondary); 
+  margin-bottom: 16px; 
+  padding-bottom: 8px; 
+  border-bottom: 1px solid var(--color-border-tertiary); 
+}
+
+.metric-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 16px; 
+}
+
+.metric-card { 
+  background: var(--color-background-secondary); 
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md); 
+  padding: 20px; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+}
+
+.metric-label { 
+  font-size: 12px; 
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary); 
+  margin-bottom: 6px; 
+}
+
+.metric-value { 
+  font-family: var(--font-heading);
+  font-size: 36px; 
+  font-weight: 800; 
+  color: var(--color-text-primary); 
+  line-height: 1; 
+}
+
+.metric-sub { 
+  font-size: 12px; 
+  color: var(--color-text-tertiary); 
+  margin-top: 6px; 
+}
+
+.chart-wrap { 
+  position: relative; 
+  width: 100%; 
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 20px;
+}
+
+.team-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
+  gap: 16px; 
+}
+
+.team-card { 
+  background: var(--color-background-primary); 
+  border: 1px solid var(--color-border-tertiary); 
+  border-radius: var(--border-radius-lg); 
+  padding: 18px 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-text-info);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+.team-name { 
+  font-family: var(--font-heading);
+  font-size: 16px; 
+  font-weight: 700; 
+  margin-bottom: 6px; 
+  color: var(--color-text-primary); 
+}
+
+.team-project { 
+  font-size: 12px; 
+  color: var(--color-text-secondary); 
+  margin-bottom: 12px; 
+  font-weight: 500;
+}
+
+.pill { 
+  display: inline-flex; 
+  align-items: center;
+  font-size: 11px; 
+  font-weight: 700;
+  padding: 4px 10px; 
+  border-radius: 20px; 
+  width: fit-content;
+}
+
+.pill-blue { 
+  background: rgba(55, 138, 221, 0.12); 
+  color: #1d70b8; 
+}
+
+.pill-teal { 
+  background: rgba(29, 158, 117, 0.12); 
+  color: #0f7554; 
+}
+
+.pill-amber { 
+  background: rgba(186, 117, 23, 0.12); 
+  color: #9c5c0a; 
+}
+
+@media (prefers-color-scheme: dark) {
+  .pill-blue { color: #5aa4e8; background: rgba(55, 138, 221, 0.2); }
+  .pill-teal { color: #3bc297; background: rgba(29, 158, 117, 0.2); }
+  .pill-amber { color: #e09f43; background: rgba(186, 117, 23, 0.2); }
+}
+
+.member-dots { 
+  display: flex; 
+  align-items: center;
+  gap: 8px; 
+  margin-top: 14px; 
+  border-top: 1px dashed var(--color-border-tertiary);
+  padding-top: 12px;
+}
+
+.member-dots-container {
+  display: flex;
+  margin-right: 4px;
+}
+
+.dot { 
+  width: 24px; 
+  height: 24px; 
+  border-radius: 50%; 
+  background: var(--color-background-info); 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 11px; 
+  font-weight: 600; 
+  color: var(--color-text-info); 
+  border: 2px solid var(--color-background-primary);
+  margin-right: -8px; /* Stack avatars */
+  transition: transform 0.2s ease;
+}
+
+.dot:hover {
+  transform: translateY(-2px);
+  z-index: 10;
+}
+
+.legend { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 16px; 
+  margin-bottom: 16px; 
+  font-size: 13px; 
+  color: var(--color-text-secondary); 
+  font-weight: 500;
+}
+
+.legend-item { 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+}
+
+.legend-swatch { 
+  width: 12px; 
+  height: 12px; 
+  border-radius: 3px; 
+}
+
+.two-col { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 24px; 
+}
+
+@media (max-width: 768px) { 
+  .two-col { 
+    grid-template-columns: 1fr; 
+  } 
+  .report-container {
+    padding: 1.25rem 1rem;
+  }
+  .report-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+  .report-title {
+    font-size: 22px;
+  }
+  .metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .metric-card {
+    padding: 16px 14px;
+  }
+  .metric-value {
+    font-size: 28px;
+  }
+  .chart-wrap {
+    padding: 16px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+  .legend {
+    gap: 10px;
+    font-size: 11px;
+  }
+}
+</style>
+
+<div class="report-container">
+  <div class="report-header">
+    <div class="report-subtitle">Ho Technical University · COMPSSA</div>
+    <h1 class="report-title">Hackathon 2026 — Registration Report</h1>
+    <div class="report-date">Registration window: 12 – 17 June 2026</div>
+  </div>
+
+  <div class="section">
+    <div class="metric-grid">
+      <div class="metric-card">
+        <div class="metric-label">Teams registered</div>
+        <div class="metric-value">16</div>
+        <div class="metric-sub">All confirmed</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Total participants</div>
+        <div class="metric-value">74</div>
+        <div class="metric-sub">Across all teams</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Avg. team size</div>
+        <div class="metric-value">4.6</div>
+        <div class="metric-sub">Min 4 · Max 5</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">5-member teams</div>
+        <div class="metric-value">10</div>
+        <div class="metric-sub">63% of teams</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Registrations over time</div>
+    <div class="chart-wrap" style="height: 220px;">
+      <canvas id="regChart" role="img" aria-label="Bar chart showing hackathon registrations by date from June 12 to June 17. Peak was June 15 with 5 registrations.">Registrations: Jun 12: 3, Jun 13: 2, Jun 14: 4, Jun 15: 5, Jun 16: 1, Jun 17: 1.</canvas>
+    </div>
+  </div>
+
+  <div class="two-col section">
+    <div>
+      <div class="section-title">Project preference</div>
+      <div class="legend">
+        <span class="legend-item"><span class="legend-swatch" style="background:#378ADD;"></span>Either (open)</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:#1D9E75;"></span>Dues Payment</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:#BA7517;"></span>E-Voting</span>
+      </div>
+      <div class="chart-wrap" style="height: 240px;">
+        <canvas id="projectChart" role="img" aria-label="Doughnut chart: 14 teams chose Either, 1 chose Dues Payment System, 1 chose Live E-Voting System.">Either: 14, Dues Payment System: 1, Live E-Voting System: 1.</canvas>
+      </div>
+    </div>
+    <div>
+      <div class="section-title">How teams found out</div>
+      <div class="legend">
+        <span class="legend-item"><span class="legend-swatch" style="background:#7F77DD;"></span>Social media</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:#D85A30;"></span>Campus flyer</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:#D4537E;"></span>Friend/team</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:#888780;"></span>Axlr8</span>
+      </div>
+      <div class="chart-wrap" style="height: 240px;">
+        <canvas id="discoverChart" role="img" aria-label="Doughnut chart: COMPSSA social media 8, campus flyer 4, friend or team member 3, Axlr8 1.">Social media: 8, Flyer: 4, Friend: 3, Axlr8: 1.</canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Skill distribution across 74 participants</div>
+    <div class="legend">
+      <span class="legend-item"><span class="legend-swatch" style="background:#378ADD;"></span>Core skills</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:#888780; opacity:0.6;"></span>Specialist roles</span>
+    </div>
+    <div class="chart-wrap" style="height: 320px;">
+      <canvas id="skillChart" role="img" aria-label="Horizontal bar chart of skill frequency. Frontend Development leads at 46, followed by Database/DevOps 32, Project Management 30, Backend Development 29, UI/UX Design 26, and several specialist roles at 1 each.">Frontend: 46, DB/DevOps: 32, PM: 30, Backend: 29, UI/UX: 26.</canvas>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">All 16 registered teams</div>
+    <div class="team-grid" id="teamGrid"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+const gridColor = isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.06)';
+const labelColor = isDark ? '#a0a0a0' : '#888';
+
+new Chart(document.getElementById('regChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Jun 12','Jun 13','Jun 14','Jun 15','Jun 16','Jun 17'],
+    datasets: [{
+      label: 'Teams registered',
+      data: [3, 2, 4, 5, 1, 1],
+      backgroundColor: '#378ADD',
+      borderRadius: 4,
+      borderSkipped: false
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { display: false }, ticks: { color: labelColor, font: { size: 12 } } },
+      y: { beginAtZero: true, max: 6, grid: { color: gridColor }, ticks: { color: labelColor, font: { size: 12 }, stepSize: 1 } }
+    }
+  }
+});
+
+new Chart(document.getElementById('projectChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Either (open)', 'Dues Payment', 'E-Voting'],
+    datasets: [{
+      data: [14, 1, 1],
+      backgroundColor: ['#378ADD', '#1D9E75', '#BA7517'],
+      borderWidth: 0,
+      hoverOffset: 6
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    cutout: '65%',
+    plugins: { legend: { display: false } }
+  }
+});
+
+new Chart(document.getElementById('discoverChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Social media', 'Campus flyer', 'Friend/team', 'Axlr8'],
+    datasets: [{
+      data: [8, 4, 3, 1],
+      backgroundColor: ['#7F77DD', '#D85A30', '#D4537E', '#888780'],
+      borderWidth: 0,
+      hoverOffset: 6
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    cutout: '65%',
+    plugins: { legend: { display: false } }
+  }
+});
+
+new Chart(document.getElementById('skillChart'), {
+  type: 'bar',
+  data: {
+    labels: [
+      'Frontend Dev', 'Database / DevOps', 'Project Management', 'Backend Dev',
+      'UI/UX Design', 'Prompt Engineering', 'Cloud computing', 'Quality Analyst',
+      'Beta Tester', 'AI automation', 'Mobile Money API'
+    ],
+    datasets: [{
+      data: [46, 32, 30, 29, 26, 1, 1, 1, 1, 1, 1],
+      backgroundColor: [
+        '#378ADD','#378ADD','#378ADD','#378ADD','#378ADD',
+        '#888780','#888780','#888780','#888780','#888780','#888780'
+      ],
+      borderRadius: 4,
+      borderSkipped: false
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { color: gridColor }, ticks: { color: labelColor, font: { size: 12 } } },
+      y: { grid: { display: false }, ticks: { color: labelColor, font: { size: 11 } } }
+    }
+  }
+});
+
+const teams = [
+  { name: 'Tech Dev Studios', size: 5, project: 'Either', program: 'BTech ICT 200' },
+  { name: 'GRID NEXUS', size: 4, project: 'Either', program: 'HND ICT 300' },
+  { name: 'Dev Binaries', size: 5, project: 'Either', program: 'Computer Science 200' },
+  { name: 'OGK FOUNDATION PLAN', size: 4, project: 'Dues Payment', program: 'BTech ICT 300' },
+  { name: 'Waves', size: 4, project: 'Either', program: 'Computer Science 100' },
+  { name: 'uCodex', size: 5, project: 'Either', program: 'BTech ICT 300' },
+  { name: 'TechNova', size: 5, project: 'Either', program: 'BTech ICT 200' },
+  { name: '404', size: 4, project: 'Either', program: 'HND ICT 200' },
+  { name: 'BOYS BOYS', size: 5, project: 'Either', program: 'ICT 300' },
+  { name: 'BlackN0d3s', size: 4, project: 'E-Voting', program: 'ICT 300 / CS 300' },
+  { name: 'Alpha Logic', size: 5, project: 'Either', program: 'HND CS 100' },
+  { name: 'Team Mitnick', size: 5, project: 'Either', program: 'BTech ICT 300' },
+  { name: 'Alpha Tech', size: 4, project: 'Either', program: 'HND IT / BTech' },
+  { name: 'Nexis', size: 5, project: 'Either', program: 'Computer Science 100' },
+  { name: 'Team Technix', size: 5, project: 'Either', program: 'Computer Science 300' },
+  { name: 'DEVELOPERS ZONE', size: 5, project: 'Either', program: 'Computer Science 200' }
+];
+
+const projectColors = {
+  'Either': 'pill-blue',
+  'Dues Payment': 'pill-teal',
+  'E-Voting': 'pill-amber'
+};
+
+const grid = document.getElementById('teamGrid');
+teams.forEach(t => {
+  const card = document.createElement('div');
+  card.className = 'team-card';
+  const dots = Array.from({ length: t.size }, () => '<div class="dot"><i class="ti ti-user" style="font-size:10px;" aria-hidden="true"></i></div>').join('');
+  card.innerHTML = `
+    <div>
+      <div class="team-name">${t.name}</div>
+      <div class="team-project">${t.program}</div>
+      <span class="pill ${projectColors[t.project] || 'pill-blue'}">${t.project}</span>
+    </div>
+    <div class="member-dots">
+      <div class="member-dots-container">${dots}</div>
+      <span style="font-size:11px; color:var(--color-text-secondary); align-self:center; font-weight:600; margin-left:12px;">${t.size} members</span>
+    </div>
+  `;
+  grid.appendChild(card);
+});
+</script>
